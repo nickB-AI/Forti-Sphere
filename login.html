@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <title>Forti Sphere Login</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell onboarding-shell">
+      <div class="container onboarding-card auth-card">
+        <p class="eyebrow">Secure sign in</p>
+        <h1>Access your protected workspace</h1>
+        <p class="lead">Sign in with your secure credentials to continue to Forti Sphere.</p>
+
+        <form id="loginForm" class="contact-form auth-form">
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="••••••••" required />
+          </label>
+          <button class="btn primary" type="submit">Sign in</button>
+          <p id="authMessage" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="reset-link">
+          <button class="link-btn" id="toggleReset" type="button">Forgot password?</button>
+        </div>
+
+        <form id="resetForm" class="contact-form auth-form hidden" hidden>
+          <label>
+            Recovery email
+            <input type="email" name="resetEmail" placeholder="you@example.com" required />
+          </label>
+          <button class="btn secondary" type="submit">Send reset link</button>
+          <p id="resetMessage" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="actions">
+          <a class="btn secondary" href="./index.html">Back home</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Forti Sphere Dashboard</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell dashboard-page">
+      <header class="dashboard-header">
+        <div class="container dashboard-nav">
+          <a class="brand" href="./index.html">
+            <span class="shield-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-label="Forti Sphere shield logo">
+                <path d="M32 6l18 8v13c0 13.2-8.5 24.9-18 31-9.5-6.1-18-17.8-18-31V14l18-8z" fill="white" opacity="0.95"/>
+                <path d="M32 14l11 4.5v8.7c0 8.5-5.1 16.4-11 20.5-5.9-4.1-11-12-11-20.5v-8.7L32 14z" fill="#07111f"/>
+              </svg>
+            </span>
+            Forti Sphere
+          </a>
+          <nav class="nav-links">
+            <a href="./index.html">Home</a>
+            <a href="./dashboard.html" class="active">Dashboard</a>
+            <button class="btn secondary small" id="signOutBtn" type="button">Sign out</button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="container dashboard-layout">
+        <aside class="sidebar-card">
+          <p class="eyebrow">Workspace</p>
+          <h2>Overview</h2>
+          <ul>
+            <li>Device ready</li>
+            <li>Onboarding active</li>
+            <li>Support available</li>
+          </ul>
+          <div class="sidebar-actions">
+            <a class="btn primary" href="./index.html#contact">Leave feedback</a>
+            <button class="btn secondary" id="refreshBtn">Refresh view</button>
+          </div>
+        </aside>
+
+        <div class="dashboard-grid">
+          <section class="hero-card">
+            <p class="eyebrow">Dashboard</p>
+            <h1>Welcome back</h1>
+            <p id="dashboardWelcome" class="lead">This screen presents a polished security-focused experience with clear priorities, quick actions, and operational insight.</p>
+            <div class="inline-actions" id="dashboardActions">
+              <a class="btn secondary" href="./login.html" id="loginActionBtn">Sign in</a>
+              <button class="btn secondary" id="signOutBtnInline" type="button">Sign out</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3>Today’s focus</h3>
+            <ul>
+              <li>Review the latest updates</li>
+              <li>Check device readiness</li>
+              <li>Continue onboarding</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h3>Protection progress</h3>
+            <div class="progress-row">
+              <span>Setup complete</span>
+              <strong>82%</strong>
+            </div>
+            <div class="bar"><span style="width: 82%"></span></div>
+          </section>
+
+          <section class="card">
+            <h3>Security status</h3>
+            <div class="insight-list">
+              <div>
+                <strong>Protected</strong>
+                <span>All core checks are in a healthy state</span>
+              </div>
+              <div>
+                <strong>Realtime</strong>
+                <span>Live monitoring and secure access available</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3>Recommended next steps</h3>
+            <ul>
+              <li>Review security posture</li>
+              <li>Confirm device protection settings</li>
+              <li>Continue onboarding</li>
+            </ul>
+          </section>
+
+          <section class="card chart-card">
+            <div class="card-title-row">
+              <h3>Security pulse</h3>
+              <span class="status-pill live">Monitoring</span>
+            </div>
+            <div class="chart-area" aria-label="Animated threat monitoring chart">
+              <div class="chart-bar" style="--h: 34%; --delay: 0.1s"></div>
+              <div class="chart-bar" style="--h: 58%; --delay: 0.25s"></div>
+              <div class="chart-bar" style="--h: 47%; --delay: 0.4s"></div>
+              <div class="chart-bar" style="--h: 76%; --delay: 0.55s"></div>
+              <div class="chart-bar" style="--h: 92%; --delay: 0.7s"></div>
+              <div class="chart-bar" style="--h: 63%; --delay: 0.85s"></div>
+            </div>
+            <div class="legend-row">
+              <span>Protected</span>
+              <span>Watchlist</span>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3>Quick controls</h3>
+            <div class="button-stack">
+              <button class="btn primary">Run security scan</button>
+              <button class="btn secondary">View alerts</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3>Live alerts</h3>
+            <div class="alert-list">
+              <div class="alert-item">
+                <strong>Access policy synced</strong>
+                <span>6 mins ago</span>
+              </div>
+              <div class="alert-item">
+                <strong>Device trust verified</strong>
+                <span>18 mins ago</span>
+              </div>
+              <div class="alert-item">
+                <strong>Offline recovery ready</strong>
+                <span>32 mins ago</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card settings-card">
+            <h3>Workspace settings</h3>
+            <div class="settings-list">
+              <label>
+                <span>Auto-protect</span>
+                <input class="settings-toggle" data-setting="autoProtect" type="checkbox" checked />
+              </label>
+              <label>
+                <span>Notifications</span>
+                <input class="settings-toggle" data-setting="notifications" type="checkbox" checked />
+              </label>
+              <label>
+                <span>Offline mode</span>
+                <input class="settings-toggle" data-setting="offlineMode" type="checkbox" />
+              </label>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

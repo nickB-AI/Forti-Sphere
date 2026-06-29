@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "Forti Sphere",
+  "short_name": "Sphere",
+  "description": "A polished, installable security app experience focused on protection, trust, and safe access.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "orientation": "any",
+  "categories": ["security", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

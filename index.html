@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="Forti Sphere is a security-first app experience focused on protection, trust, and safe access." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Forti Sphere" />
+    <title>Forti Sphere Security</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <nav class="top-nav container">
+          <a class="brand" href="#">
+            <span class="shield-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img" aria-label="Forti Sphere shield logo">
+                <path d="M32 6l18 8v13c0 13.2-8.5 24.9-18 31-9.5-6.1-18-17.8-18-31V14l18-8z" fill="white" opacity="0.95"/>
+                <path d="M32 14l11 4.5v8.7c0 8.5-5.1 16.4-11 20.5-5.9-4.1-11-12-11-20.5v-8.7L32 14z" fill="#07111f"/>
+              </svg>
+            </span>
+            Forti Sphere
+          </a>
+          <div class="nav-links" id="mainNav">
+            <a href="#security">Security</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./onboarding.html">Onboarding</a>
+            <a href="./login.html">Login</a>
+          </div>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        </nav>
+
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Security-first • Portable • Trusted</p>
+            <h1>Protect what matters with a secure, modern experience.</h1>
+            <p class="lead">
+              Forti Sphere brings together protection, clarity, and fast access so users can operate confidently across devices.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#security">Explore security</a>
+              <button id="installBtn" class="btn secondary" hidden data-install-trigger>Install app</button>
+              <button id="themeToggle" class="btn secondary">Toggle theme</button>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="status-row">
+              <span class="status-pill live">● Live monitoring</span>
+              <span class="status-pill">Protected</span>
+            </div>
+            <h2>Security highlights</h2>
+            <ul>
+              <li>Encrypted-safe interaction model</li>
+              <li>Device-ready access and monitoring</li>
+              <li>Trusted onboarding experience</li>
+              <li>Installable for fast secure use</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="security-banner install-banner" id="installNotice" hidden>
+            <div>
+              <h3>Install Forti Sphere</h3>
+              <p>Add this secure experience to your home screen for faster access and offline support.</p>
+            </div>
+            <button class="btn secondary" data-install-trigger hidden id="installBtnInline">Install now</button>
+          </div>
+        </div>
+
+        <section id="security" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Security</p>
+              <h2>Built around protection, visibility, and confidence.</h2>
+            </div>
+            <div class="security-banner">
+              <div>
+                <h3>Enterprise-grade protection, simplified</h3>
+                <p>Every interaction is designed to feel secure, clear, and dependable from first touch to ongoing use.</p>
+              </div>
+              <div class="badge-row">
+                <span class="status-pill live">Encrypted</span>
+                <span class="status-pill">Trusted access</span>
+                <span class="status-pill">Always on</span>
+              </div>
+            </div>
+            <div class="card-grid">
+              <article class="card">
+                <h3>Threat awareness</h3>
+                <p>Users get clear visibility into the security posture of their environment with simple, actionable insight.</p>
+              </article>
+              <article class="card">
+                <h3>Safe access</h3>
+                <p>Designed to support secure access across phones, tablets, and desktops without compromising clarity.</p>
+              </article>
+              <article class="card">
+                <h3>Integrity-first</h3>
+                <p>The experience focuses on trusted workflows, protected communication, and dependable performance.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="section alt">
+          <div class="container">
+            <div class="section-heading">
+              <p class="eyebrow">Features</p>
+              <h2>Security features designed for real-world use.</h2>
+            </div>
+            <div class="feature-grid">
+              <div class="feature-item">
+                <h3>Secure onboarding</h3>
+                <p>Guided setup that emphasizes trust, clarity, and safe first steps.</p>
+              </div>
+              <div class="feature-item">
+                <h3>Responsive protection</h3>
+                <p>A reliable experience that adapts to any device while maintaining security posture.</p>
+              </div>
+              <div class="feature-item">
+                <h3>Offline resilience</h3>
+                <p>Core experience remains available even when the connection is weak or interrupted.</p>
+              </div>
+              <div class="feature-item">
+                <h3>Installable access</h3>
+                <p>Install the app on supported devices to keep security tools close at hand.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="container split">
+            <div>
+              <p class="eyebrow">About</p>
+              <h2>A security-first product experience</h2>
+              <p>
+                Forti Sphere is shaped around trusted, secure access and a clear user experience. This version focuses on protection, installability, and device-ready operation.
+              </p>
+            </div>
+            <div class="stack">
+              <div class="pill">Protected by design</div>
+              <div class="pill">Trusted on any device</div>
+              <div class="pill">Built for secure engagement</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section alt">
+          <div class="container contact-panel">
+            <div>
+              <p class="eyebrow">Stay secure</p>
+              <h2>Let us know what protection experience you want next.</h2>
+              <p>Your note is saved locally in this browser so you can revisit the app later.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Security need
+                <textarea name="interest" rows="4" placeholder="What security capability would you like to see?"></textarea>
+              </label>
+              <button class="btn primary" type="submit">Save note</button>
+              <p id="formMessage" class="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>Forti Sphere • Security-first experience • Trusted access</p>
+          <p class="footer-links">
+            <a href="./privacy.html">Privacy</a>
+            <a href="./terms.html">Terms</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
